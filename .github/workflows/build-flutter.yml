@@ -29,7 +29,7 @@ jobs:
           channel: 'stable'
       - name: Prepare Project
         env:
-          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: \${{ secrets.PAT_TOKEN }}
         run: |
           set -e
           echo '\${{ github.event.inputs.payload }}' > payload.json
